@@ -167,9 +167,18 @@ class Instructor extends Lambdasian {
 class Student extends Lambdasian{
   constructor(attributes){
   super(attributes)
-  this.previousBackground = attributes.previousBackgrounds,
+  this.previousBackground = attributes.previousBackground,
   this.className = attributes.className,
   this.favSubjects = attributes.favSubjects
+  }
+  listSubjects(){
+    return this.favSubjects.map(item => item);
+  }
+  PRAssignment(subject){
+    return `${this.name} has submitted a PR for ${subject}`;
+  }
+  sprintChallenge(subject){
+    return `${this.name} has begun sprint challenge on ${subject}`;
   }
 
 }
